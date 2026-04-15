@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Baikuntha Rimal – Serial Entrepreneur, Founder of Addressgraph Nepal & Kataho. Building 100+ products shaping Nepal's digital future."/>
+  <meta name="keywords" content="Baikuntha Rimal, Addressgraph Nepal, Kataho, Nepal entrepreneur, startup Nepal, digital products Nepal"/>
+  <meta name="author" content="Baikuntha Rimal"/>
+  <meta property="og:title" content="Baikuntha Rimal | Entrepreneur · Visionary · Builder"/>
+  <meta property="og:description" content="Serial entrepreneur running 100+ products and projects. Driving Addressgraph Nepal. Creator of Kataho."/>
+  <meta property="og:type" content="website"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <title>Baikuntha Rimal | Entrepreneur · Visionary · Builder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-trail" id="cursorTrail"></div>
+
+<!-- PRELOADER -->
+<div class="preloader" id="preloader">
+  <div class="preloader-inner">
+    <div class="preloader-logo">BR</div>
+    <div class="preloader-bar"><div class="preloader-fill" id="preloaderFill"></div></div>
+    <div class="preloader-text">Loading Excellence...</div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-logo">
+    <span class="logo-br">BR</span>
+    <span class="logo-name">Baikuntha Rimal</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#journey">Journey</a></li>
+    <li><a href="#ventures">Ventures</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#stats">Impact</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-cta" onclick="scrollToSection('contact')">Let's Connect</button>
+  <div class="nav-hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+    <li><a href="#journey" onclick="closeMobileMenu()">Journey</a></li>
+    <li><a href="#ventures" onclick="closeMobileMenu()">Ventures</a></li>
+    <li><a href="#projects" onclick="closeMobileMenu()">Projects</a></li>
+    <li><a href="#stats" onclick="closeMobileMenu()">Impact</a></li>
+    <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+  </ul>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <div class="hero-orb orb1"></div>
+    <div class="hero-orb orb2"></div>
+    <div class="hero-orb orb3"></div>
+    <canvas id="heroCanvas"></canvas>
+  </div>
+  <div class="hero-content">
+    <div class="hero-eyebrow reveal-up">
+      <span class="dot-pulse"></span>
+      <span>Entrepreneur · Innovator · Builder</span>
+    </div>
+    <h1 class="hero-title reveal-up delay-1">
+      <span class="title-line">Baikuntha</span>
+      <span class="title-line italic">Rimal</span>
+    </h1>
+    <p class="hero-sub reveal-up delay-2">
+      Driving Nepal's digital transformation through <span class="highlight">100+ products & projects</span>.<br/>
+      Founder of <strong>Addressgraph Nepal</strong> · Creator of <strong>Kataho</strong>
+    </p>
+    <div class="hero-badges reveal-up delay-3">
+      <div class="badge"><span class="badge-num" data-target="100">0</span><span>+</span><small>Products</small></div>
+      <div class="badge-sep"></div>
+      <div class="badge"><span class="badge-num" data-target="10">0</span><span>+</span><small>Years</small></div>
+      <div class="badge-sep"></div>
+      <div class="badge"><span class="badge-num" data-target="50">0</span><span>K+</span><small>Users Impacted</small></div>
+    </div>
+    <div class="hero-actions reveal-up delay-4">
+      <button class="btn-primary" onclick="scrollToSection('ventures')">Explore My Work</button>
+      <button class="btn-ghost" onclick="scrollToSection('contact')">Get In Touch</button>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- MARQUEE TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span>Addressgraph Nepal</span><span class="sep">✦</span>
+    <span>Kataho</span><span class="sep">✦</span>
+    <span>Serial Entrepreneur</span><span class="sep">✦</span>
+    <span>100+ Products</span><span class="sep">✦</span>
+    <span>Nepal's Digital Future</span><span class="sep">✦</span>
+    <span>Product Builder</span><span class="sep">✦</span>
+    <span>Visionary Leader</span><span class="sep">✦</span>
+    <span>Addressgraph Nepal</span><span class="sep">✦</span>
+    <span>Kataho</span><span class="sep">✦</span>
+    <span>Serial Entrepreneur</span><span class="sep">✦</span>
+    <span>100+ Products</span><span class="sep">✦</span>
+    <span>Nepal's Digital Future</span><span class="sep">✦</span>
+    <span>Product Builder</span><span class="sep">✦</span>
+    <span>Visionary Leader</span><span class="sep">✦</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual reveal-left">
+        <div class="about-img-wrap">
+          <div class="about-img-placeholder">
+            <div class="initials-big">BR</div>
+            <div class="about-img-ring ring1"></div>
+            <div class="about-img-ring ring2"></div>
+            <div class="about-img-ring ring3"></div>
+          </div>
+          <div class="about-tag tag1">🇳🇵 Kathmandu, Nepal</div>
+          <div class="about-tag tag2">⚡ Currently: Addressgraph</div>
+        </div>
+      </div>
+      <div class="about-text reveal-right">
+        <div class="section-label">Who I Am</div>
+        <h2 class="section-title">Building Nepal's<br/><em>Digital Backbone</em></h2>
+        <p class="about-lead">
+          I'm Baikuntha Rimal — a professional entrepreneur who doesn't just run businesses, I build ecosystems. With over 100 products and projects under my belt, I've dedicated my career to solving real problems for real people through technology and innovation.
+        </p>
+        <p class="about-body">
+          Currently, I'm at the helm of <strong>Addressgraph Nepal</strong>, revolutionizing how addresses work in Nepal — and leading the product vision for <strong>Kataho</strong>, a platform transforming how Nepalis discover, compare, and decide.
+        </p>
+        <div class="about-tags-row">
+          <span class="tag-pill">🎯 Product Strategy</span>
+          <span class="tag-pill">🚀 Startup Scaling</span>
+          <span class="tag-pill">💡 Innovation</span>
+          <span class="tag-pill">🌐 Digital Nepal</span>
+          <span class="tag-pill">📊 Business Growth</span>
+          <span class="tag-pill">🤝 Leadership</span>
+        </div>
+        <a class="btn-outline" href="#contact">Download CV</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROFESSIONAL JOURNEY -->
+<section class="journey" id="journey">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <div class="section-label">Career Path</div>
+      <h2 class="section-title">Professional <em>Journey</em></h2>
+      <p class="section-desc">A decade of building, failing, learning, and growing — each chapter sharper than the last.</p>
+    </div>
+    <div class="timeline" id="timeline">
+      <!-- Dynamically rendered via JS / PHP -->
+    </div>
+  </div>
+</section>
+
+<!-- FLAGSHIP VENTURES -->
+<section class="ventures" id="ventures">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <div class="section-label">Flagship Ventures</div>
+      <h2 class="section-title">The <em>Ventures</em><br/>Defining Nepal</h2>
+    </div>
+    <div class="ventures-grid">
+      <!-- Addressgraph Card -->
+      <div class="venture-card featured reveal-up">
+        <div class="venture-card-bg" style="--clr: #FF6B35"></div>
+        <div class="venture-logo">AG</div>
+        <div class="venture-status live">● Live</div>
+        <h3>Addressgraph Nepal</h3>
+        <p class="venture-role">Founder & CEO</p>
+        <p class="venture-desc">Nepal's most ambitious address infrastructure project — mapping every location, every house, every business with precision and digital intelligence.</p>
+        <div class="venture-features">
+          <span>📍 Address Mapping</span>
+          <span>🗺️ GIS Integration</span>
+          <span>📦 Logistics Ready</span>
+          <span>🔗 API Platform</span>
+        </div>
+        <div class="venture-footer">
+          <span class="venture-year">2020 – Present</span>
+          <a href="#" class="venture-link" target="_blank">Visit ↗</a>
+        </div>
+      </div>
+      <!-- Kataho Card -->
+      <div class="venture-card featured reveal-up delay-1">
+        <div class="venture-card-bg" style="--clr: #00D4AA"></div>
+        <div class="venture-logo">KT</div>
+        <div class="venture-status live">● Live</div>
+        <h3>Kataho</h3>
+        <p class="venture-role">Product Lead</p>
+        <p class="venture-desc">The ultimate "What to buy?" platform for Nepal — helping millions of users discover products, compare options, and make informed purchase decisions.</p>
+        <div class="venture-features">
+          <span>🛒 Price Comparison</span>
+          <span>⭐ Reviews</span>
+          <span>🔍 Discovery</span>
+          <span>📱 Mobile First</span>
+        </div>
+        <div class="venture-footer">
+          <span class="venture-year">2022 – Present</span>
+          <a href="https://kataho.com" class="venture-link" target="_blank">Visit ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS (Dynamic) -->
+<section class="projects" id="projects">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <div class="section-label">Portfolio</div>
+      <h2 class="section-title">100+ Products &amp;<br/><em>Projects</em></h2>
+      <p class="section-desc">Each product is a solved problem, a captured opportunity, a life made slightly better.</p>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="filter-tabs reveal-up" id="filterTabs">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="tech">Technology</button>
+      <button class="filter-btn" data-filter="saas">SaaS</button>
+      <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
+      <button class="filter-btn" data-filter="media">Media</button>
+      <button class="filter-btn" data-filter="social">Social Impact</button>
+    </div>
+
+    <div class="projects-grid" id="projectsGrid">
+      <!-- Rendered by JS -->
+    </div>
+
+    <div class="projects-cta reveal-up">
+      <button class="btn-ghost" id="loadMoreBtn" onclick="loadMoreProjects()">Load More Projects</button>
+    </div>
+
+    <!-- ADD PROJECT PANEL (Admin) -->
+    <div class="admin-panel" id="adminPanel" style="display:none;">
+      <div class="admin-header">
+        <h3>+ Add New Project</h3>
+        <button onclick="toggleAdmin()">✕</button>
+      </div>
+      <div class="admin-form">
+        <div class="form-row">
+          <input type="text" id="projTitle" placeholder="Project Title" />
+          <input type="text" id="projCategory" placeholder="Category (tech/saas/ecommerce...)" />
+        </div>
+        <textarea id="projDesc" placeholder="Short description..."></textarea>
+        <div class="form-row">
+          <input type="text" id="projFeature1" placeholder="Feature 1" />
+          <input type="text" id="projFeature2" placeholder="Feature 2" />
+          <input type="text" id="projFeature3" placeholder="Feature 3" />
+        </div>
+        <div class="form-row">
+          <input type="text" id="projYear" placeholder="Year (e.g. 2023)" />
+          <input type="text" id="projUrl" placeholder="URL (optional)" />
+          <select id="projStatus">
+            <option value="live">Live</option>
+            <option value="building">Building</option>
+            <option value="acquired">Acquired</option>
+            <option value="archived">Archived</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <input type="text" id="projEmoji" placeholder="Emoji icon (e.g. 🚀)" />
+          <input type="text" id="projColor" placeholder="Color hex (e.g. #FF6B35)" />
+        </div>
+        <button class="btn-primary" onclick="addProject()">Add Project</button>
+      </div>
+    </div>
+
+    <div class="admin-toggle reveal-up" style="margin-top:2rem; text-align:center;">
+      <button class="btn-ghost small" onclick="toggleAdmin()">⚙ Manage Projects</button>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT STATS -->
+<section class="stats" id="stats">
+  <div class="stats-bg">
+    <div class="stats-orb s1"></div>
+    <div class="stats-orb s2"></div>
+  </div>
+  <div class="container">
+    <div class="section-header reveal-up">
+      <div class="section-label">Impact</div>
+      <h2 class="section-title" style="color:#fff">Numbers That<br/><em>Speak Loud</em></h2>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-card reveal-up delay-0">
+        <div class="stat-icon">🚀</div>
+        <div class="stat-num counter" data-target="100">0</div>
+        <div class="stat-suffix">+</div>
+        <div class="stat-label">Products Built</div>
+      </div>
+      <div class="stat-card reveal-up delay-1">
+        <div class="stat-icon">👥</div>
+        <div class="stat-num counter" data-target="50000">0</div>
+        <div class="stat-suffix">+</div>
+        <div class="stat-label">Users Impacted</div>
+      </div>
+      <div class="stat-card reveal-up delay-2">
+        <div class="stat-icon">🏢</div>
+        <div class="stat-num counter" data-target="12">0</div>
+        <div class="stat-suffix"></div>
+        <div class="stat-label">Active Ventures</div>
+      </div>
+      <div class="stat-card reveal-up delay-3">
+        <div class="stat-icon">📍</div>
+        <div class="stat-num counter" data-target="1000000">0</div>
+        <div class="stat-suffix">+</div>
+        <div class="stat-label">Addresses Mapped</div>
+      </div>
+      <div class="stat-card reveal-up delay-4">
+        <div class="stat-icon">🌐</div>
+        <div class="stat-num counter" data-target="10">0</div>
+        <div class="stat-suffix">+</div>
+        <div class="stat-label">Years Building</div>
+      </div>
+      <div class="stat-card reveal-up delay-5">
+        <div class="stat-icon">🤝</div>
+        <div class="stat-num counter" data-target="200">0</div>
+        <div class="stat-suffix">+</div>
+        <div class="stat-label">Partners & Clients</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS & RECOGNITION -->
+<section class="achievements" id="achievements">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <div class="section-label">Recognition</div>
+      <h2 class="section-title">Awards &amp;<br/><em>Achievements</em></h2>
+    </div>
+    <div class="achievements-grid" id="achievementsGrid">
+      <!-- Rendered by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <div class="section-label">What People Say</div>
+      <h2 class="section-title">Voices That<br/><em>Matter</em></h2>
+    </div>
+    <div class="testimonials-track" id="testimonialsTrack">
+      <!-- Rendered by JS -->
+    </div>
+    <div class="testimonial-dots" id="testimonialDots"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info reveal-left">
+        <div class="section-label">Let's Talk</div>
+        <h2 class="section-title">Start a<br/><em>Conversation</em></h2>
+        <p>Whether it's a partnership, investment, collaboration, or just a conversation about the future of Nepal's digital landscape — my inbox is always open.</p>
+        <div class="contact-links">
+          <a href="mailto:baikuntha@addressgraph.com" class="contact-link">
+            <span class="cl-icon">✉</span>
+            <div>
+              <small>Email</small>
+              <strong>baikuntha@addressgraph.com</strong>
+            </div>
+          </a>
+          <a href="#" class="contact-link">
+            <span class="cl-icon">📍</span>
+            <div>
+              <small>Location</small>
+              <strong>Kathmandu, Nepal</strong>
+            </div>
+          </a>
+          <a href="https://linkedin.com/in/baikuntha-rimal" class="contact-link" target="_blank">
+            <span class="cl-icon">in</span>
+            <div>
+              <small>LinkedIn</small>
+              <strong>linkedin.com/in/baikuntha-rimal</strong>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="contact-form-wrap reveal-right">
+        <form class="contact-form" id="contactForm" onsubmit="submitForm(event)">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Email Address" required />
+          </div>
+          <div class="form-group">
+            <input type="text" name="subject" placeholder="Subject" />
+          </div>
+          <div class="form-group">
+            <textarea name="message" placeholder="Tell me about your idea..." rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary full-width" id="submitBtn">
+            <span>Send Message</span>
+            <span class="btn-arrow">→</span>
+          </button>
+          <div class="form-success" id="formSuccess" style="display:none;">
+            ✅ Message sent! I'll get back to you soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">BR</div>
+        <p>Baikuntha Rimal<br/>Entrepreneur · Builder · Visionary</p>
+        <p class="footer-tagline">Building Nepal's digital tomorrow, today.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#journey">Journey</a></li>
+          <li><a href="#ventures">Ventures</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-ventures">
+        <h4>Ventures</h4>
+        <ul>
+          <li><a href="#" target="_blank">Addressgraph Nepal</a></li>
+          <li><a href="https://kataho.com" target="_blank">Kataho</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Connect</h4>
+        <div class="social-icons">
+          <a href="#" class="social-icon" title="LinkedIn">in</a>
+          <a href="#" class="social-icon" title="Twitter">𝕏</a>
+          <a href="#" class="social-icon" title="GitHub">⌥</a>
+          <a href="#" class="social-icon" title="Facebook">f</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Baikuntha Rimal. All rights reserved.</p>
+      <p>Made with 🔥 in Kathmandu, Nepal</p>
+    </div>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="back-top" id="backTop" onclick="scrollToTop()">↑</button>
+
+<script src="app.js"></script>
+</body>
+</html>
