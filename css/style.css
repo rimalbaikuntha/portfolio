@@ -30,26 +30,26 @@ body {
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
 }
-/* ---------- Animated patterned background ---------- */
+/* ---------- Animated wave background (very light) ---------- */
 body::before, body::after {
-  content: ""; position: fixed; inset: -64px; z-index: -1; pointer-events: none;
+  content: ""; position: fixed; inset: -80px; z-index: -1; pointer-events: none;
 }
 body::before {
-  background-image:
-    radial-gradient(circle, var(--accent) 1.2px, transparent 1.6px),
-    repeating-linear-gradient(45deg, var(--clay) 0 1px, transparent 1px 28px);
-  background-size: 28px 28px, auto;
-  opacity: .12;
-  animation: bg-drift 40s linear infinite, bg-pulse 8s ease-in-out infinite;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%221200%22 height=%22320%22 viewBox=%220 0 1200 320%22%3E%3Cpath d=%22M0 60 Q150 10 300 60 T600 60 T900 60 T1200 60%22 fill=%22none%22 stroke=%22%23a8512b%22 stroke-width=%221.5%22/%3E%3Cpath d=%22M0 100 Q150 40 300 100 T600 100 T900 100 T1200 100%22 fill=%22none%22 stroke=%22%231c4a3e%22 stroke-width=%221.5%22/%3E%3Cpath d=%22M0 140 Q150 95 300 140 T600 140 T900 140 T1200 140%22 fill=%22none%22 stroke=%22%23c98a3a%22 stroke-width=%221.5%22/%3E%3Cpath d=%22M0 180 Q150 120 300 180 T600 180 T900 180 T1200 180%22 fill=%22none%22 stroke=%22%233b7ea1%22 stroke-width=%221.5%22/%3E%3Cpath d=%22M0 220 Q150 170 300 220 T600 220 T900 220 T1200 220%22 fill=%22none%22 stroke=%22%238a4a8f%22 stroke-width=%221.5%22/%3E%3Cpath d=%22M0 260 Q150 205 300 260 T600 260 T900 260 T1200 260%22 fill=%22none%22 stroke=%22%231c4a3e%22 stroke-width=%221.5%22/%3E%3C/svg%3E");
+  background-size: 1200px 320px;
+  opacity: .1;
+  animation: wave-flow 50s linear infinite, wave-sway 9s ease-in-out infinite alternate, bg-pulse 10s ease-in-out infinite;
 }
 body::after {
   background:
-    radial-gradient(40vmax 40vmax at 15% 20%, color-mix(in srgb, var(--clay) 18%, transparent), transparent 70%),
-    radial-gradient(45vmax 45vmax at 85% 75%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 70%);
-  animation: bg-float 22s ease-in-out infinite alternate, bg-pulse 12s ease-in-out infinite reverse;
+    radial-gradient(38vmax 38vmax at 12% 18%, color-mix(in srgb, var(--clay) 14%, transparent), transparent 70%),
+    radial-gradient(42vmax 42vmax at 88% 30%, color-mix(in srgb, #3b7ea1 12%, transparent), transparent 70%),
+    radial-gradient(45vmax 45vmax at 60% 90%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 70%);
+  animation: bg-float 26s ease-in-out infinite alternate, bg-pulse 14s ease-in-out infinite reverse;
 }
-@keyframes bg-drift { to { background-position: 28px 28px, 0 0; } }
-@keyframes bg-pulse { 0%, 100% { opacity: .07; } 50% { opacity: .2; } }
+@keyframes wave-flow { to { background-position: 1200px 0; } }
+@keyframes wave-sway { from { transform: translateY(-14px); } to { transform: translateY(14px); } }
+@keyframes bg-pulse { 0%, 100% { opacity: .05; } 50% { opacity: .13; } }
 @keyframes bg-float { from { transform: translate(-3%, -2%) scale(1); } to { transform: translate(3%, 3%) scale(1.12); } }
 img { max-width: 100%; display: block; }
 a { color: inherit; }
