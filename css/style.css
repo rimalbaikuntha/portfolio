@@ -1,21 +1,22 @@
 /* Baikuntha Rimal — portfolio
-   Editorial, quiet, type-led. One accent colour, hairline rules, no effects. */
+   Breed-inspired: white canvas, Roboto, blue-to-pink gradient accents. */
 
 :root {
-  --paper: #f5f2ec;
-  --paper-2: #ece7de;
-  --ink: #151716;
-  --ink-2: #3b403d;
-  --muted: #6b706c;
-  --line: #d9d3c7;
-  --accent: #1c4a3e;
-  --accent-ink: #f5f2ec;
-  --clay: #a8512b;
+  --paper: #ffffff;
+  --paper-2: #f8faff;
+  --ink: #222222;
+  --ink-2: #4a4f5c;
+  --muted: #777e8c;
+  --line: #e6eaf5;
+  --accent: #1345e6;
+  --accent-ink: #ffffff;
+  --clay: #ed239f;
 
-  --serif: "Newsreader", Georgia, "Times New Roman", serif;
-  --sans: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --serif: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --sans: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
 
   --wrap: 1120px;
+  --grad: linear-gradient(90deg, #1345e6, #ed239f);
   --gutter: clamp(20px, 5vw, 48px);
 }
 
@@ -43,7 +44,7 @@ body::before {
 body::after {
   background:
     radial-gradient(38vmax 38vmax at 12% 18%, color-mix(in srgb, var(--clay) 14%, transparent), transparent 70%),
-    radial-gradient(42vmax 42vmax at 88% 30%, color-mix(in srgb, #3b7ea1 12%, transparent), transparent 70%),
+    radial-gradient(42vmax 42vmax at 88% 30%, color-mix(in srgb, #1b9de2 12%, transparent), transparent 70%),
     radial-gradient(45vmax 45vmax at 60% 90%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 70%);
   animation: bg-float 26s ease-in-out infinite alternate, bg-pulse 14s ease-in-out infinite reverse;
 }
@@ -276,3 +277,39 @@ input:focus, textarea:focus { outline: none; border-color: var(--clay); box-shad
   .figure, .figure + .figure { padding: 20px 0; border-left: 0; border-bottom: 1px solid var(--line); }
   .facts div { grid-template-columns: 1fr; gap: 2px; }
 }
+
+/* ---------- Breed-inspired theme layer ---------- */
+h1, h2, h3 { font-weight: 700; letter-spacing: -0.01em; }
+h1 { text-transform: uppercase; letter-spacing: .01em; }
+h1 em, h2 em { font-style: normal; background: var(--grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.eyebrow { letter-spacing: 2px; font-weight: 500; }
+.eyebrow::before { height: 2px; background: var(--grad); }
+.site-header { background: color-mix(in srgb, #fff 88%, transparent); border-bottom-color: transparent; box-shadow: 0 1px 0 var(--line); }
+.brand { font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 19px; }
+.nav a { font-weight: 500; text-transform: uppercase; font-size: 13px; letter-spacing: 1px; }
+.nav a:hover { border-color: #1345e6; }
+.nav a[aria-current="page"] { border-color: #ed239f; }
+.nav .nav-cta { border: 0; color: #fff; background: var(--grad); }
+.nav .nav-cta:hover, .nav .nav-cta[aria-current="page"] { background: var(--grad); color: #fff; opacity: .9; }
+.btn { border: 0; background: var(--grad); color: #fff; text-transform: uppercase; letter-spacing: 1px; font-size: 13px; font-weight: 500; padding: 15px 32px; box-shadow: 0 10px 24px -10px rgba(19,69,230,.55); transition: transform .2s, box-shadow .2s; }
+.btn:hover { background: var(--grad); border: 0; transform: translateY(-2px); box-shadow: 0 14px 28px -10px rgba(237,35,159,.55); }
+.btn.ghost { background: #fff; color: #1345e6; box-shadow: inset 0 0 0 1.5px #1345e6; }
+.btn.ghost:hover { background: var(--grad); color: #fff; box-shadow: 0 14px 28px -10px rgba(237,35,159,.55); }
+.link-arrow { border-image: var(--grad) 1; border-bottom-width: 2px; border-bottom-style: solid; }
+.figures, .rows, .cols-3, .awards, .facts, .principles { border-top: 2px solid; border-image: var(--grad) 1; }
+.figure strong { background: var(--grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-weight: 700; width: fit-content; }
+.col, .row { transition: background .3s; }
+.cols-3 .col { background: #f8faff; margin: 0; padding: 36px 30px; border-left: 0; }
+.cols-3 .col + .col { border-left: 0; padding-left: 30px; }
+.cols-3 { gap: 20px; border-top: 0; border-image: none; }
+.cols-3 .col:hover { box-shadow: 0 20px 40px -20px rgba(19,69,230,.25); background: #fff; }
+.chips li { border-color: #dfe5fb; background: #f8faff; }
+.tinted .chips li { background: #fff; }
+.feature .tag, .principles li::before { background: var(--grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-weight: 700; width: fit-content; }
+.portrait { border: 0; box-shadow: 0 30px 60px -30px rgba(19,69,230,.35); }
+.dark { background: linear-gradient(135deg, #0b1230, #2a0f3d); }
+.dark .btn { background: var(--grad); color: #fff; }
+.dark .btn.ghost { background: transparent; color: #fff; box-shadow: inset 0 0 0 1.5px #ffffff88; }
+.prose p:first-of-type { font-family: var(--sans); }
+input:focus, textarea:focus { border-color: #1345e6; box-shadow: 0 1px 0 #1345e6; }
+:focus-visible { outline-color: #1345e6; }
